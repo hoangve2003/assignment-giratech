@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/migration/create-table-category.yaml
+  - include:
+      file: db/migration/create-table-product.yaml

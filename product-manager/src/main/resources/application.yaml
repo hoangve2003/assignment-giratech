@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://;serverName=localhost;databaseName=PRODUCT_MANAGER;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  liquibase:
+    change-log: classpath:db/changelog/liquibase-changelog.yaml
+    enabled: true
+
+

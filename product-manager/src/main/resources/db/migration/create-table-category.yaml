@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: hoang
+      preConditions:
+        onFail: MARK_RAN
+        not:
+          tableExists:
+            tableName: Category
+      changes:
+        - createTable:
+            tableName: Category
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: category_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: createdAt
+                  type: DATE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updatedAt
+                  type: DATE
+                  constraints:
+                    nullable: false
